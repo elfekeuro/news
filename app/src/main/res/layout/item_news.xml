@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:id="@+id/layout"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:targetApi="m"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imPic"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="10dp"
+            tools:text="China April factory activity contracts at steeper pace as lockdowns bite"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:textColor="@color/teal_300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContent"
+            android:layout_marginTop="5dp"
+            tools:text="China's factory activity contracted at a steeper pace in April as widespread COVID-19 lockdowns halted industrial production and disrupted supply chains, raising fears of a sharp economic slowdown in the second quarter that will weigh on global growth."
+            android:maxLines="6"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUpdate"
+            android:layout_marginTop="10dp"
+            tools:text="Updated : Dec 07,03:04"
+            android:maxLines="6"
+            android:ellipsize="end"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="SmallSp" />
+
+        <View
+            android:layout_marginTop="10dp"
+            android:background="@color/greyThin"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:src="@drawable/ic_right_arrow_svgrepo_com"
+        android:layout_width="20dp"
+        android:layout_height="20dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/grey"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:background="@color/teal_700"
+        android:layout_width="match_parent"
+        android:gravity="center|start"
+        android:layout_height="?actionBarSize">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutBack"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:rotation="180"
+                android:padding="5dp"
+                android:layout_gravity="start"
+                android:tint="@color/white"
+                android:src="@drawable/ic_right_arrow_svgrepo_com"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:text="@string/back"
+                android:maxLines="6"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvHeader"
+            android:text="@string/details"
+            android:maxLines="6"
+            android:gravity="center"
+            android:layout_marginEnd="70dp"
+            android:ellipsize="end"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imPic"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            android:layout_marginTop="10dp"
+            tools:text="China April factory activity contracts at steeper pace as lockdowns bite"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:textColor="@color/teal_300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvContent"
+            android:layout_marginTop="5dp"
+            tools:text="China's factory activity contracted at a steeper pace in April as widespread COVID-19 lockdowns halted industrial production and disrupted supply chains, raising fears of a sharp economic slowdown in the second quarter that will weigh on global growth."
+            android:maxLines="6"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUpdate"
+            android:layout_marginTop="10dp"
+            tools:text="Updated : Dec 07,03:04"
+            android:maxLines="6"
+            android:layout_gravity="start"
+            android:ellipsize="end"
+            android:textSize="10sp"
+            android:textColor="@color/grey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="SmallSp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>
