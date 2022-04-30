@@ -1,12 +1,14 @@
 package com.example.news.scene.main
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.SearchView
-import com.example.news.R
 import com.example.news.base.BaseActivity
 import com.example.news.databinding.ActivityMainBinding
+import com.example.news.extension.findMiddleIndex
 import com.example.news.extension.intentToAnotherActivity
+import com.example.news.extension.isPalindrome
 import com.example.news.extension.toast
 import com.example.news.model.NewsModel
 import com.example.news.scene.detail.DetailActivity
@@ -30,14 +32,14 @@ class MainActivity : BaseActivity() {
 
     override fun initialView() {
         viewModel.getNews("today")
-        binding.searchView.setOnQueryTextListener(object :SearchView.OnQueryTextListener{
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 viewModel.getNews(query.toString())
                 return true
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-               return true
+                return true
             }
         })
     }
@@ -60,9 +62,9 @@ class MainActivity : BaseActivity() {
 
     private fun showNews(list: ArrayList<NewsModel>) {
         newsAdapter = NewsAdapter(list).apply {
-            onItemClickListener = {item->
+            onItemClickListener = { item ->
                 intentToAnotherActivity(DetailActivity::class.java, Bundle().apply {
-                    this.putParcelable(NEWS_MODEL,item)
+                    this.putParcelable(NEWS_MODEL, item)
                 })
             }
         }
