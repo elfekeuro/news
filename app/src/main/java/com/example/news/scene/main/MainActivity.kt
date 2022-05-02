@@ -1,14 +1,11 @@
 package com.example.news.scene.main
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.SearchView
 import com.example.news.base.BaseActivity
 import com.example.news.databinding.ActivityMainBinding
-import com.example.news.extension.findMiddleIndex
 import com.example.news.extension.intentToAnotherActivity
-import com.example.news.extension.isPalindrome
 import com.example.news.extension.toast
 import com.example.news.model.NewsModel
 import com.example.news.scene.detail.DetailActivity

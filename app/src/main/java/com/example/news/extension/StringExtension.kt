@@ -11,13 +11,3 @@ fun String.toDateUpdatedFormat(): String {
 
     return SimpleDateFormat(updatedFormat, Locale.ENGLISH).format(date ?: Date())
 }
-
-fun String.isPalindrome(): Boolean {
-    val strLength = this.length
-    var reverseStr = ""
-
-    for (i in strLength - 1 downTo 0) {
-        reverseStr += this[i]
-    }
-    return this.lowercase(Locale.getDefault()) == reverseStr.lowercase(Locale.getDefault())
-}

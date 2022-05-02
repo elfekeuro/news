@@ -7,6 +7,7 @@ import com.example.news.repository.NewsRepository
 import com.example.weatherforecast.service.event.NetworkEvent
 import kotlinx.coroutines.launch
 import java.net.HttpURLConnection
+import java.util.*
 
 class MainViewModel(
     private val repository: NewsRepository
@@ -28,5 +29,26 @@ class MainViewModel(
             }
         }
         _newResponse.value = NetworkEvent.Loading(false)
+    }
+
+    fun findMiddleIndex(array: Array<Int>): String {
+        var sum = 0
+        var leftsum = 0
+        for (x in array) sum += x
+        for (i in array.indices) {
+            if (leftsum == sum - leftsum - array[i]) return "middle index is $i"
+            leftsum += array[i]
+        }
+        return "index not found"
+    }
+
+    fun isPalindrome(word:String): Boolean {
+        val strLength = word.length
+        var reverseStr = ""
+
+        for (i in strLength - 1 downTo 0) {
+            reverseStr += word[i]
+        }
+        return word.lowercase(Locale.getDefault()) == reverseStr.lowercase(Locale.getDefault())
     }
 }
